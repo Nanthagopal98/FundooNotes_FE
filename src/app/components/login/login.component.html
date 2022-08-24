@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="header">
+        <span class="head-font" style="color: blue;">F</span>
+        <span class="head-font" style="color: rgb(191, 255, 0);">u</span>
+        <span class="head-font" style="color: rgb(255, 98, 0);">n</span>
+        <span class="head-font" style="color: rgb(0, 200, 255);">d</span>
+        <span class="head-font" style="color: rgb(255, 0, 0);">o</span>
+        <span class="head-font" style="color: rgb(246, 12, 199);">o</span>
+    </div>
+    <div class="description">
+        <span class="desc-span1">Sign in</span>
+    </div>
+    <div class="description">
+        <span class="desc-span2">Use Your Fundoo Account</span>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit) = "onSubmit()">
+        <div class="login-details">
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Email" formControlName="email">
+                    <mat-error>Enter email</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input id="pass" type="password" matInput placeholder="Password" formControlName="password">
+                    <mat-error>Enter password</mat-error>
+                </mat-form-field>
+            </p>
+        </div>
+        <div class="forgot-div">
+            <div class="show-password">
+                <input type="checkbox" style="width: 18px; height: 18px; border: 5px;margin-top: 0px;" onclick="myFunction()">
+                <label>Show password</label>
+            </div>
+            <a routerLink="/forgot" class="forgot-password">Forget Password?</a>
+        </div>
+        <div class="div-buttom">
+            <a routerLink="/register" class="create-acc">Create account</a>
+            <button class="next">Next</button>
+        </div>
+    </form>
+</div>

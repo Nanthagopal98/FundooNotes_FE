@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FundooNote</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="mat-typography">
+  <script>
+    window.onload = function () {
+      var colors = ['blue', 'rgb(191, 255, 0)', 'rgb(255, 98, 0)', 'rgb(0, 200, 255)', 'rgb(255, 0, 0)', 'rgb(246, 12, 199)'];
+      for(i=1; i< 7; i++){
+      setColor = document.getElementById(i);
+      setColor.style.color = colors[i-1];
+      }
+    };    
+  </script>
+  <script>
+    function myFunction() {
+    var x = document.getElementById("pass");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+  </script>
+  <app-root></app-root>
+</body>
+</html>
