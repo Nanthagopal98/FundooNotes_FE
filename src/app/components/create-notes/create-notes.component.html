@@ -1,0 +1,65 @@
+<div>
+    <div *ngIf="display;then takeNotes else inputNotes"></div>
+    <ng-template #takeNotes>
+        <div class="takenotes">
+            <input class="notesbar" type="text" placeholder="Take a note..." (click)="display = !display">
+            <button class="notesbutton">
+                <img class="notes_img" src="../../../assets/check_box_FILL0_wght400_GRAD0_opsz48.svg">
+            </button>
+            <button class="notesbutton">
+                <img class="notes_img" src="../../../assets/draw_FILL0_wght400_GRAD0_opsz48.svg">
+            </button>
+            <button class="notesbutton">
+                <img class="notes_img" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg">
+            </button>
+        </div>
+    </ng-template>
+    <ng-template #inputNotes>
+        <form  [formGroup]="notesForm" (ngSubmit)="onSubmit()">
+        <div class="createnotes">
+            <div class="notesfield">
+                
+                    <div class="titlebar">
+                        <input class="title" type="text" placeholder="Title" formControlName="title">
+                        <button class="notesbutton">
+                            <img class="notes_img" src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.svg">
+                        </button>
+                    </div>
+                    <input class="desc" type="text" placeholder="Take a note..." style="font-size: 15px; font-weight: 200;" formControlName="desc">
+                    <div class="notesicon">
+                        <div class="icons">
+                            <button class="notesbutton">
+                                <img class="moreicons" src="../../../assets/notes/notifications_active_FILL0_wght400_GRAD0_opsz48.svg">
+                            </button>
+                            <button class="notesbutton">
+                                <img class="moreicons" src="../../../assets/group.svg">
+                            </button>
+                            <button class="notesbutton">
+                                <img class="moreicons" src="../../../assets/notes/palette_FILL0_wght400_GRAD0_opsz48.svg">
+                            </button>
+                            <button class="notesbutton">
+                                <img class="moreicons" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg">
+                            </button>
+                            <button class="notesbutton">
+                                <img class="moreicons" src="../../../assets/archive.svg">
+                            </button>
+                            <button class="notesbutton">
+                                <img class="moreicons" src="../../../assets/notes/more_vert_FILL0_wght400_GRAD0_opsz48.svg">
+                            </button>
+                            <button class="notesbutton">
+                                <img class="moreicons" src="../../../assets/notes/undo_FILL0_wght400_GRAD0_opsz48.svg">
+                            </button>
+                            <button class="notesbutton">
+                                <img class="moreicons" src="../../../assets/notes/redo_FILL0_wght400_GRAD0_opsz48.svg">
+                            </button>
+                        </div>
+                        <button class="notesclose notesbutton">
+                            Close
+                        </button>
+                    </div>
+                
+            </div>
+        </div>
+    </form>
+    </ng-template>
+</div>

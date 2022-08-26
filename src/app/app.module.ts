@@ -21,7 +21,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 import {MatMenuModule} from '@angular/material/menu';
+import { CreateNotesComponent } from './components/create-notes/create-notes.component';
 
+
+import { FormsModule } from '@angular/forms';
+import { GetnotesComponent } from './components/getnotes/getnotes.component'
 
 @NgModule({
   declarations: [
@@ -31,6 +35,8 @@ import {MatMenuModule} from '@angular/material/menu';
     ForgotPasswordComponent,
     ResetPasswordComponent,
     DashboardComponent,
+    CreateNotesComponent,
+    GetnotesComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +51,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatIconModule,
     MatListModule,
     MatSidenavModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
