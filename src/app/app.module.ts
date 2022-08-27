@@ -25,7 +25,11 @@ import { CreateNotesComponent } from './components/create-notes/create-notes.com
 
 
 import { FormsModule } from '@angular/forms';
-import { GetnotesComponent } from './components/getnotes/getnotes.component'
+import { GetnotesComponent } from './components/getnotes/getnotes.component';
+import { DisplayNotesComponent } from './components/display-notes/display-notes.component'
+
+import {MatCardModule} from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +41,7 @@ import { GetnotesComponent } from './components/getnotes/getnotes.component'
     DashboardComponent,
     CreateNotesComponent,
     GetnotesComponent,
+    DisplayNotesComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +57,8 @@ import { GetnotesComponent } from './components/getnotes/getnotes.component'
     MatListModule,
     MatSidenavModule,
     MatMenuModule,
-    FormsModule
+    FormsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
