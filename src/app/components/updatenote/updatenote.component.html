@@ -1,0 +1,24 @@
+
+
+<div class="text-Title">
+    <mat-card-title><input matInput [(ngModel)]="title" style="width: 400px; height: 30px; border: none;"></mat-card-title>
+  </div>
+  <div class="text-body">
+    <input matInput [(ngModel)]="description" style="width: 400px; height: 30px; border: none;">
+  </div>
+  <div fxLayout="row" fxLayoutAlign="space-between end">
+    <div class="icons">
+      <button class="notesbutton">
+        <img style="opacity: 0.5;" src="../../../assets/notes/notifications_active_FILL0_wght400_GRAD0_opsz48.svg">
+        <img style="opacity: 0.5;" src="../../../assets/notes/palette_FILL0_wght400_GRAD0_opsz48.svg">
+        <img style="opacity: 0.5;" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg">
+        <img style="opacity: 0.5;" src="../../../assets/archive.svg">
+        <img style="opacity: 0.5;" src="../../../assets/notes/more_vert_FILL0_wght400_GRAD0_opsz48.svg">
+        <img style="opacity: 0.5;" src="../../../assets/notes/redo_FILL0_wght400_GRAD0_opsz48.svg">
+      </button>
+    </div>
+    <div>
+      <button mat-icon-button (click)="closeDialog()" style="opacity: 0.9; background: none; border: none;" > Close </button>
+    </div>
+  </div>
+

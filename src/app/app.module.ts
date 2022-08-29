@@ -29,6 +29,9 @@ import { GetnotesComponent } from './components/getnotes/getnotes.component';
 import { DisplayNotesComponent } from './components/display-notes/display-notes.component'
 
 import {MatCardModule} from '@angular/material/card';
+import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
+
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -42,6 +45,7 @@ import {MatCardModule} from '@angular/material/card';
     CreateNotesComponent,
     GetnotesComponent,
     DisplayNotesComponent,
+    UpdatenoteComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +62,8 @@ import {MatCardModule} from '@angular/material/card';
     MatSidenavModule,
     MatMenuModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

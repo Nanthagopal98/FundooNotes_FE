@@ -28,4 +28,15 @@ export class NotesService {
     }
     return this.httpService.getService('/Notes/Get', true, header);
   }
+
+  updateNotes(reqData:any, notesId:any){
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpService.putService('/Notes/Update?notesId='+notesId, reqData ,true, header);
+  }
+  
 }

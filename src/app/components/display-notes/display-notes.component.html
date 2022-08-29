@@ -1,10 +1,10 @@
 <div *ngFor= "let notes of notesList" class="card">
     <mat-card class="example-card" class="notesContainer">
-      <mat-card-title class="title">{{notes.title}}
+      <mat-card-title class="title" (click)="editNoteDialogBox(notes)">{{notes.title}}
         <img class="moreicons1" src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.svg">
       </mat-card-title>
       <mat-card-content >
-        <p>{{notes.description}}</p>
+        <p (click)="editNoteDialogBox(notes)">{{notes.description}}</p>
         <div>{{notes.notesId}}</div>
       </mat-card-content>
       
