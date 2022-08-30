@@ -38,5 +38,16 @@ export class NotesService {
     }
     return this.httpService.putService('/Notes/Update?notesId='+notesId, reqData ,true, header);
   }
+
+  trashNotes(reqData:any){
+    console.log(reqData)
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpService.putService('/Notes/Trash?notesId='+reqData.notesId ,{},true, header);
+  }
   
 }

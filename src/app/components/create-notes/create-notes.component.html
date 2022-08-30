@@ -28,29 +28,15 @@
                     <input class="desc" type="text" placeholder="Take a note..." style="font-size: 15px; font-weight: 200;" formControlName="desc">
                     <div class="notesicon">
                         <div class="icons">
-                            <button class="notesbutton">
-                                <img class="moreicons" src="../../../assets/notes/notifications_active_FILL0_wght400_GRAD0_opsz48.svg">
-                            </button>
-                            <button class="notesbutton">
-                                <img class="moreicons" src="../../../assets/group.svg">
-                            </button>
-                            <button class="notesbutton">
-                                <img class="moreicons" src="../../../assets/notes/palette_FILL0_wght400_GRAD0_opsz48.svg">
-                            </button>
-                            <button class="notesbutton">
-                                <img class="moreicons" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg">
-                            </button>
-                            <button class="notesbutton">
-                                <img class="moreicons" src="../../../assets/archive.svg">
-                            </button>
-                            <button class="notesbutton">
-                                <img class="moreicons" src="../../../assets/notes/more_vert_FILL0_wght400_GRAD0_opsz48.svg">
-                            </button>
-                            <button class="notesbutton">
-                                <img class="moreicons" src="../../../assets/notes/undo_FILL0_wght400_GRAD0_opsz48.svg">
-                            </button>
-                            <button class="notesbutton">
-                                <img class="moreicons" src="../../../assets/notes/redo_FILL0_wght400_GRAD0_opsz48.svg">
+                            <button class="notesbutton" style="display: flex; gap: 15px;">
+                                <img id="1" class="moreicons" src="../../../assets/notes/notifications_active_FILL0_wght400_GRAD0_opsz48.svg">
+                                <img id="2" class="moreicons" src="../../../assets/group.svg">
+                                <img id="3" class="moreicons" src="../../../assets/notes/palette_FILL0_wght400_GRAD0_opsz48.svg">
+                                <img id="4" class="moreicons" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg">
+                                <img id="5" class="moreicons" src="../../../assets/archive.svg">
+                                <img id="6" class="moreicons" src="../../../assets/notes/more_vert_FILL0_wght400_GRAD0_opsz48.svg">
+                                <img id="7" class="moreicons" src="../../../assets/notes/undo_FILL0_wght400_GRAD0_opsz48.svg">
+                                <img id="8" class="moreicons" src="../../../assets/notes/redo_FILL0_wght400_GRAD0_opsz48.svg">
                             </button>
                         </div>
                         <button class="notesclose notesbutton" (ngSubmit)="onSubmit()" >

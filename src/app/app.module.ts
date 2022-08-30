@@ -32,6 +32,8 @@ import {MatCardModule} from '@angular/material/card';
 import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
 
 import {MatDialogModule} from '@angular/material/dialog';
+import { IconsComponent } from './components/icons/icons.component';
+import { TrashComponent } from './components/trash/trash.component';
 
 
 @NgModule({
@@ -46,6 +48,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     GetnotesComponent,
     DisplayNotesComponent,
     UpdatenoteComponent,
+    IconsComponent,
+    TrashComponent,
   ],
   imports: [
     BrowserModule,

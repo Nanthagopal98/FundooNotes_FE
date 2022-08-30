@@ -1,37 +1,24 @@
 .card {
-     
-     margin-bottom: 8px;
-     display: table-row;
-     margin-left: 200px;
-   }
-  .notesContainer{
-    padding: 10px;
-    border: 1px lightgray ;
-    margin: 10px;
-    width: 180px;
-  }
-  .icons{
     display: flex;
-    gap: 4px;
+    margin-bottom: 8px;
+    display: table-row;
 }
-.moreicons{
-    height: 15px;
-    width: 15px;
-    padding-top: 6px;
-    opacity: 0.5;
+
+.notesContainer {
+    padding: 10px;
+    border: 1px lightgray;
+    margin: 15px;
+    width: 220px;
 }
-.moreicons1{
+
+.moreicons1 {
     height: 20px;
     width: 20px;
     padding-top: 6px;
     opacity: 0.5;
 }
-.notesbutton{
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-.title{
+
+.title {
     display: flex;
     justify-content: space-between;
 }

@@ -60,14 +60,14 @@
                         <img class="sideBar_img" src="../../../assets/archive.svg" >
                         <span class="sideBar_text">Archiev</span>
                     </a>
-                    <a mat-list-item routerLink="/dashboard/notes" class="sidebar">
+                    <a mat-list-item routerLink="/dashboard/notes/trash" class="sidebar">
                         <img class="sideBar_img" src="../../../assets/delete.svg" >
                         <span class="sideBar_text">Trash</span>
                     </a>
             </mat-nav-list>
         </mat-sidenav>
 
-        <mat-sidenav-content>
+        <mat-sidenav-content class="sidenervContent">
             <router-outlet></router-outlet>
         </mat-sidenav-content>
     </mat-sidenav-container>

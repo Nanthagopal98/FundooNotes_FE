@@ -1,32 +1,15 @@
-<div *ngFor= "let notes of notesList" class="card">
-    <mat-card class="example-card" class="notesContainer">
-      <mat-card-title class="title" (click)="editNoteDialogBox(notes)">{{notes.title}}
-        <img class="moreicons1" src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.svg">
-      </mat-card-title>
-      <mat-card-content >
-        <p (click)="editNoteDialogBox(notes)">{{notes.description}}</p>
-        <div>{{notes.notesId}}</div>
-      </mat-card-content>
-      
-      <div class="icons" ngMouseover="display">
-        <button class="notesbutton">
-            <img class="moreicons" src="../../../assets/notes/notifications_active_FILL0_wght400_GRAD0_opsz48.svg">
-        </button>
-        <button class="notesbutton">
-            <img class="moreicons" src="../../../assets/group.svg">
-        </button>
-        <button class="notesbutton">
-            <img class="moreicons" src="../../../assets/notes/palette_FILL0_wght400_GRAD0_opsz48.svg">
-        </button>
-        <button class="notesbutton">
-            <img class="moreicons" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg">
-        </button>
-        <button class="notesbutton">
-            <img class="moreicons" src="../../../assets/archive.svg">
-        </button>
-        <button class="notesbutton">
-            <img class="moreicons" src="../../../assets/notes/more_vert_FILL0_wght400_GRAD0_opsz48.svg">
-        </button>
-    </div>
+<div *ngFor="let notes of notesList" class="card">
+    <mat-card class="notesContainer">
+        <mat-card-title class="title" (click)="editNoteDialogBox(notes)">{{notes.title}}
+            <img class="moreicons1" src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.svg">
+        </mat-card-title>
+        <mat-card-content>
+            <p (click)="editNoteDialogBox(notes)">{{notes.description}}</p>
+            <div>{{notes.notesId}}</div>
+        </mat-card-content>
+
+        <div>
+            <app-icons [notesObject]="notes"></app-icons>
+        </div>
     </mat-card>
 </div>

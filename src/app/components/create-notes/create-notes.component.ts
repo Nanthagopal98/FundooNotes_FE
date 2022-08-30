@@ -35,7 +35,8 @@ export class CreateNotesComponent implements OnInit{
       this.notes.addNotes(reqData).subscribe((response:any) =>{
         console.log(response); 
       });
-      this.display = true;
+      
     }
+    this.display = true;
   }
 }

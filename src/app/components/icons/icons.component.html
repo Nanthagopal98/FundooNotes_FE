@@ -1,0 +1,16 @@
+<button class="notesbutton">
+    <img id="1" class="moreicons" src="../../../assets/notes/notifications_active_FILL0_wght400_GRAD0_opsz48.svg">
+    <img id="2" class="moreicons" src="../../../assets/group.svg">
+    <img id="3" class="moreicons" src="../../../assets/notes/palette_FILL0_wght400_GRAD0_opsz48.svg">
+    <img id="4" class="moreicons" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg">
+    <img id="5" class="moreicons" src="../../../assets/archive.svg">
+    <img id="6" class="moreicons" [matMenuTriggerFor]="moreMenu" src="../../../assets/notes/more_vert_FILL0_wght400_GRAD0_opsz48.svg">
+    <mat-menu #moreMenu="matMenu" xPosition="before">
+        <button mat-menu-item (click) = "onDelete()" >Delete note</button>
+        <button mat-menu-item>Add label</button>
+        <button mat-menu-item>Add drawing</button>
+        <button mat-menu-item>Make a copy</button>
+        <button mat-menu-item>Show checkboxes</button>
+    </mat-menu>
+</button>
+

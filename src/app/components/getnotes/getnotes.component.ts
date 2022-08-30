@@ -18,6 +18,10 @@ export class GetnotesComponent implements OnInit {
       console.log(response);
       this.notesArray = response.data;
       console.log(this.notesArray);
+      this.notesArray=this.notesArray.filter((object: any) => {
+        return object.trash == false;
+        
+      })
     })
   }
 }
