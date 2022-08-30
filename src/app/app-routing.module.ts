@@ -7,6 +7,7 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { GetnotesComponent } from './components/getnotes/getnotes.component';
 import { TrashComponent } from './components/trash/trash.component';
+import { ArchievComponent } from './components/archiev/archiev.component';
 
 const routes: Routes = [
   {path:'register', component:RegistrationComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   children:[
     {path:'', redirectTo:"/home/notes", pathMatch:'full' },
     {path:'notes', component:GetnotesComponent},
-    {path:'trash', component:TrashComponent}
+    {path:'trash', component:TrashComponent},
+    {path:'archiev', component:ArchievComponent}
   ]
 }
 ];

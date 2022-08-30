@@ -34,6 +34,7 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
 import {MatDialogModule} from '@angular/material/dialog';
 import { IconsComponent } from './components/icons/icons.component';
 import { TrashComponent } from './components/trash/trash.component';
+import { ArchievComponent } from './components/archiev/archiev.component';
 
 
 
@@ -51,6 +52,7 @@ import { TrashComponent } from './components/trash/trash.component';
     UpdatenoteComponent,
     IconsComponent,
     TrashComponent,
+    ArchievComponent,
   ],
   imports: [
     BrowserModule,
