@@ -17,11 +17,17 @@ export class GetnotesComponent implements OnInit {
     this.notes.getNotes().subscribe((response: any) => {
       console.log(response);
       this.notesArray = response.data;
+      console.log("Stored To Array Variable")
       console.log(this.notesArray);
       this.notesArray=this.notesArray.filter((object: any) => {
         return object.trash == false;
         
       })
+      this.notesArray = this.notesArray.filter((object:any) =>{
+        return object.archive == false;
+        
+      })
+      this.notesArray.reverse()
     })
   }
 }

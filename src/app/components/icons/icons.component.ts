@@ -21,4 +21,14 @@ export class IconsComponent implements OnInit {
       console.log("Note Trashed Successfully",response);
     })
   }
+  onArchiev(){
+    let reqData = {
+      notesId : this.notesObject.notesId
+    }
+    console.log(reqData)
+    this.notes.archievNotes(reqData).subscribe((response:any) =>{
+    console.log(response)
+    })
+
+  }
 }

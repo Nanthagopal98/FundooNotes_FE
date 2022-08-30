@@ -49,5 +49,15 @@ export class NotesService {
     }
     return this.httpService.putService('/Notes/Trash?notesId='+reqData.notesId ,{},true, header);
   }
-  
+
+  archievNotes(reqdata:any){
+    console.log(reqdata)
+    let header ={
+      headers: new HttpHeaders({
+      'Content-type':'application/json',
+      'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpService.putService('/Notes/Archive?noteId='+reqdata.notesId,{},true,header);
+  }
 }

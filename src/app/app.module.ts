@@ -33,7 +33,7 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
 
 import {MatDialogModule} from '@angular/material/dialog';
 import { IconsComponent } from './components/icons/icons.component';
-import { TrashComponent } from './components/trash/trash.component';
+
 
 
 @NgModule({
@@ -49,7 +49,6 @@ import { TrashComponent } from './components/trash/trash.component';
     DisplayNotesComponent,
     UpdatenoteComponent,
     IconsComponent,
-    TrashComponent,
   ],
   imports: [
     BrowserModule,
