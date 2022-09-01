@@ -25,6 +25,15 @@ export class TrashComponent implements OnInit {
     })
     
   }
+  restore(notes:any){
+    let reqData = {
+      notesId : notes.notesId
+    }
+    console.log(reqData)
+    this.notes.trashNotes(reqData).subscribe((response:any) =>{
+    console.log(response)
+    })
+  }
 
 
 }

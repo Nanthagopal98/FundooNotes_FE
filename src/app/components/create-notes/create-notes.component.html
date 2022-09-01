@@ -15,36 +15,42 @@
         </div>
     </ng-template>
     <ng-template #inputNotes>
-        <form  [formGroup]="notesForm" (ngSubmit)="onSubmit()">
-        <div class="createnotes">
-            <div class="notesfield">
-                
+        <form [formGroup]="notesForm" (ngSubmit)="onSubmit()">
+            <div class="createnotes">
+                <div class="notesfield">
+    
                     <div class="titlebar">
                         <input class="title" type="text" placeholder="Title" formControlName="title">
                         <button class="notesbutton">
                             <img class="notes_img" src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.svg">
                         </button>
                     </div>
-                    <input class="desc" type="text" placeholder="Take a note..." style="font-size: 15px; font-weight: 200;" formControlName="desc">
+                    <input class="desc" type="text" placeholder="Take a note..." style="font-size: 15px; font-weight: 200;"
+                        formControlName="desc">
+    
                     <div class="notesicon">
                         <div class="icons">
+                            <app-icons></app-icons>
                             <button class="notesbutton" style="display: flex; gap: 15px;">
-                                <img id="1" class="moreicons" src="../../../assets/notes/notifications_active_FILL0_wght400_GRAD0_opsz48.svg">
-                                <img id="2" class="moreicons" src="../../../assets/group.svg">
-                                <img id="3" class="moreicons" src="../../../assets/notes/palette_FILL0_wght400_GRAD0_opsz48.svg">
-                                <img id="4" class="moreicons" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg">
-                                <img id="5" class="moreicons" src="../../../assets/archive.svg">
-                                <img id="6" class="moreicons" src="../../../assets/notes/more_vert_FILL0_wght400_GRAD0_opsz48.svg">
-                                <img id="7" class="moreicons" src="../../../assets/notes/undo_FILL0_wght400_GRAD0_opsz48.svg">
-                                <img id="8" class="moreicons" src="../../../assets/notes/redo_FILL0_wght400_GRAD0_opsz48.svg">
+                                <!-- <img id="1" class="moreicons" src="../../../assets/notes/notifications_active_FILL0_wght400_GRAD0_opsz48.svg">
+                                        <img id="2" class="moreicons" src="../../../assets/group.svg">
+                                        <img id="3" class="moreicons" src="../../../assets/notes/palette_FILL0_wght400_GRAD0_opsz48.svg">
+                                        <img id="4" class="moreicons" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg">
+                                        <img id="5" class="moreicons" src="../../../assets/archive.svg">
+                                        <img id="6" class="moreicons" src="../../../assets/notes/more_vert_FILL0_wght400_GRAD0_opsz48.svg"> -->
+                                <img id="7" class="moreicons"
+                                    src="../../../assets/notes/undo_FILL0_wght400_GRAD0_opsz48.svg">
+                                <img id="8" class="moreicons"
+                                    src="../../../assets/notes/redo_FILL0_wght400_GRAD0_opsz48.svg">
                             </button>
                         </div>
-                        <button class="notesclose notesbutton" (ngSubmit)="onSubmit()" >
+                        <button class="notesclose notesbutton" (ngSubmit)="onSubmit()">
                             Close
                         </button>
                     </div>
+                </div>
             </div>
-        </div>
-    </form>
+    
+        </form>
     </ng-template>
 </div>

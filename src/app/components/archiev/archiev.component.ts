@@ -17,7 +17,7 @@ export class ArchievComponent implements OnInit {
     this.notes.getNotes().subscribe((response:any) =>{
       this.archievList = response.data
       this.archievList = this.archievList.filter((object : any) =>{
-        return object.archive == true;
+        return object.archive == true && object.trash == false;
       })
       console.log(this.archievList)
     })

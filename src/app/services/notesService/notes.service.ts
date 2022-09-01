@@ -60,4 +60,15 @@ export class NotesService {
     }
     return this.httpService.putService('/Notes/Archive?noteId='+reqdata.notesId,{},true,header);
   }
+
+  notesColor(reqdata:any){
+    console.log(reqdata)
+    let header ={
+      headers: new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':'Bearer '+this.token
+    })
+  }
+    return this.httpService.putService('/Notes/Color?notesId='+reqdata.notesId+'&color='+reqdata.color,{},true,header);
+  }
 }
