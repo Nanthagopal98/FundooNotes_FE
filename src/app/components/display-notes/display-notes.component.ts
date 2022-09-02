@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter,Input, OnInit, Output } from '@angular/core';
 import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 import {MatDialog} from '@angular/material/dialog';
 
@@ -8,9 +8,10 @@ import {MatDialog} from '@angular/material/dialog';
   styleUrls: ['./display-notes.component.scss']
 })
 export class DisplayNotesComponent implements OnInit {
-
+  @Output() refreshEventFromDisplaytoGetall = new EventEmitter<string>();
 
   constructor(public dialog:MatDialog) { }
+  message:any
   @Input() notesList:any;
   ngOnInit(): void {
   }
@@ -24,6 +25,12 @@ export class DisplayNotesComponent implements OnInit {
      dialogbox.afterClosed().subscribe(result =>{
       console.log(result);
      })
+  }
+
+  receivedRefreshEvent($event:any){
+    console.log("Icon to Display "+$event);
+    this.message = $event;
+    this.refreshEventFromDisplaytoGetall.emit(this.message)
   }
 
 }

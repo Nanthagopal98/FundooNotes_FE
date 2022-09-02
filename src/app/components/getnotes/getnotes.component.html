@@ -1,4 +1,4 @@
-<app-create-notes></app-create-notes>
+<app-create-notes (refreshEventCreate)="receiverRefreshEventCreate($event)"></app-create-notes>
 
-<app-display-notes [notesList] = "notesArray"></app-display-notes>
+<app-display-notes [notesList] = "notesArray" (refreshEventFromDisplaytoGetall)="receivedRefreshEventFromDisplaytoGetall($event)"></app-display-notes>
 

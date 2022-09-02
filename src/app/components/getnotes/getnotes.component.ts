@@ -30,4 +30,13 @@ export class GetnotesComponent implements OnInit {
       this.notesArray.reverse()
     })
   }
+  receivedRefreshEventFromDisplaytoGetall($event:any){
+    console.log("Display to GetAllNotes"+$event);
+    this.onSubmit()
+  }
+
+  receiverRefreshEventCreate($event:any){
+    console.log("Create to GetAllNotes"+$event);
+    this.onSubmit()
+  }
 }

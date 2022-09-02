@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NotesService } from 'src/app/services/notesService/notes.service';
 import { ActivatedRoute } from '@angular/router';
@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./create-notes.component.scss']
 })
 export class CreateNotesComponent implements OnInit{
+  @Output() refreshEventCreate = new EventEmitter<string>();
   notesForm !:FormGroup;
   display:boolean = true;
   submitted = false;
@@ -34,6 +35,7 @@ export class CreateNotesComponent implements OnInit{
       console.log(reqData);
       this.notes.addNotes(reqData).subscribe((response:any) =>{
         console.log(response); 
+        this.refreshEventCreate.emit(response)
       });
       
     }
