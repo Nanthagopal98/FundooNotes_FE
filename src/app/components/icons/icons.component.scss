@@ -31,13 +31,15 @@
     height: 25px;
     width: 25px;
     cursor: pointer;
+    margin-left: 40px;
 }
 
-::ng-deep{
-.mat-menu-content:not(:empty){
+/* ::ng-deep{
+    .mat-menu-content:not(:empty){
     display: flex;
     gap: 10px;
     margin-top: 12px;
+    flex-direction: row;
 }
 .mat-menu-panel{
     max-width: 500px;
@@ -45,5 +47,7 @@
     padding: 0px 10px;
     border: 1px transparent lightcyan;
 }
-}
+} */
+
+
 

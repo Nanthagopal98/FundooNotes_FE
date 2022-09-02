@@ -36,6 +36,8 @@ import { IconsComponent } from './components/icons/icons.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { ArchievComponent } from './components/archiev/archiev.component';
 
+import { AuthguardService } from './services/authguardService/authguard.service';
+
 
 
 @NgModule({
@@ -53,6 +55,8 @@ import { ArchievComponent } from './components/archiev/archiev.component';
     IconsComponent,
     TrashComponent,
     ArchievComponent,
+
+    
   ],
   imports: [
     BrowserModule,
@@ -72,7 +76,9 @@ import { ArchievComponent } from './components/archiev/archiev.component';
     MatCardModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [
+    AuthguardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,9 +1,9 @@
 <div *ngFor="let notes of trashList" class="card">
-    <mat-card class="notesContainer">
+    <mat-card class="notesContainer" [style.background]="notes.color">
         <mat-card-title class="title" >{{notes.title}}
         </mat-card-title>
         <mat-card-content>
-            <p >{{notes.description}}</p>
+            <div style="min-height: 35px; display: block; overflow-wrap: break-word;">{{notes.description}}</div>
             <div>{{notes.notesId}}</div>
         </mat-card-content>
 
