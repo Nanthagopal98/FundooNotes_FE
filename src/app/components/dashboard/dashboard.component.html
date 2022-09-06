@@ -9,7 +9,7 @@
         </div>
         <div class="search">
             <img src="../../../assets/search_icon.svg" class="search_img">
-            <input class="search_box" type="text" placeholder="Search" aria-hidden="false">
+            <input class="search_box" type="text" placeholder="Search" aria-hidden="false" (keyup)="search($event)">
             <button  class="searchButton">
                 <img src="../../../assets/close_header.svg" class="search_img">
             </button>

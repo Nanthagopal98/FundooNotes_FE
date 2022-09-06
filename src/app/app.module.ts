@@ -37,6 +37,7 @@ import { TrashComponent } from './components/trash/trash.component';
 import { ArchievComponent } from './components/archiev/archiev.component';
 
 import { AuthguardService } from './services/authguardService/authguard.service';
+import { FilterPipe } from './Pipes/filter.pipe';
 
 
 
@@ -55,6 +56,7 @@ import { AuthguardService } from './services/authguardService/authguard.service'
     IconsComponent,
     TrashComponent,
     ArchievComponent,
+    FilterPipe,
 
     
   ],

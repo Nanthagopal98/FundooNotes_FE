@@ -1,4 +1,4 @@
-<div *ngFor="let notes of notesList" class="card">
+<div *ngFor="let notes of notesList | filter : filterNote"  class="card">
     <mat-card class="notesContainer" [style.background]="notes.color">
         <mat-card-title mat-input class="title"  (click)="editNoteDialogBox(notes)">{{notes.title}}
             <img class="moreicons1" src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.svg">

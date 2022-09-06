@@ -1,6 +1,7 @@
 import { Component, EventEmitter,Input, OnInit, Output } from '@angular/core';
 import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 import {MatDialog} from '@angular/material/dialog';
+import { DataService } from 'src/app/services/dataService/data.service';
 
 @Component({
   selector: 'app-display-notes',
@@ -10,10 +11,19 @@ import {MatDialog} from '@angular/material/dialog';
 export class DisplayNotesComponent implements OnInit {
   @Output() refreshEventFromDisplaytoGetall = new EventEmitter<string>();
 
-  constructor(public dialog:MatDialog) { }
+  filterNote : any;
+
+  constructor(public dialog:MatDialog, private data:DataService) { }
   message:any
   @Input() notesList:any;
+  @Output() updateAutoRefresh = new EventEmitter<string>();
+
+
   ngOnInit(): void {
+    this.data.incomingData.subscribe((response) => {
+      console.log("Search in process", response);
+      this.filterNote = response;
+    })
   }
 
   editNoteDialogBox(notes:any){
@@ -24,6 +34,7 @@ export class DisplayNotesComponent implements OnInit {
      })
      dialogbox.afterClosed().subscribe(result =>{
       console.log(result);
+      this.updateAutoRefresh.emit(result);
      })
   }
 
